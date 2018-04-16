@@ -1,2 +1,4 @@
-# Readme
-* [Markdown CheatSheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+# Food Magazine Template
+
+
+_Responsive landing page for a food magazine using flexbox._
