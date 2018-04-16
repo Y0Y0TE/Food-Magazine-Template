@@ -1,0 +1,539 @@
+// @charset 'UTF-8'
+@import '../fonts/league-spartan'
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,700')
+@import 'normalize'
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Variables * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+$transition-time     : .3s ease-out
+$offset              : 5.375rem
+
+// -- Colors --
+$background          : #33395c
+$main-text           : #fff
+$gray-text           : #b0b3c4
+$hover-color         : lighten($gray-text, 30%)
+
+// -- Buttons Styling --
+$button-yellow       : #e9d036
+$button-brown        : #491a37
+$button-blue         : #3e67c9
+$button-green        : #65d8b9
+$button-red          : #d95d4d
+$button-blue-twitter : #72c8e6
+$button-blue-facebook: #5b79b8
+
+// -- Fonts --
+$sans-serif: 'League Spartan', sans-serif
+$sans-serif-two: 'Arial', sans-serif
+$serif: 'Old Standard TT', serif
+
+// -- Pseudo Classe and Mixins --
+=button-color($color: #fff, $shade: 30%)
+  background-color: $color
+  &::before
+    background-color: darken($color, $shade)
+
+=line-height-hack($margin: .25em)
+  margin-top: $margin
+
+%container
+  flex: 0 0 auto
+  max-width: 66.75rem
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+
+%align-center
+  align-items: center
+  text-align: center
+
+%align-right
+  align-items: flex-end
+  text-align: right
+
+%padding-style-two
+  padding: 4rem 3% 5rem
+
+%flex-column
+  display: flex
+  flex-direction: column
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Base  * * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+body
+  @extend %flex-column
+  min-height: 100vh
+  padding: 0 $offset
+  background-color: $background
+  color: $main-text
+  font-family: $sans-serif
+
+header, footer
+  @extend %container
+  margin-top: 62px
+  margin-bottom: 55px
+  line-height: 1
+
+header
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+footer
+  text-align: center
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+  &:focus
+    outline-offset: 8px
+    outline-style: solid
+    outline-width: 1px
+    outline-color: $hover-color
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Main Content * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+.main-content
+  @extend %container
+  flex: 1 0 auto
+  -webkit-hyphens: auto
+  -ms-hyphens: auto
+  hyphens: auto
+  svg > .fill
+    fill: $main-text
+
+.row-flex
+  display: flex
+  > *
+    flex: 0 0 auto
+    overflow-x: hidden
+
+.wrap-vertical-one-column
+  flex-basis: percentage(312 / 1068)
+  @extend %flex-column
+  > *
+    flex-basis: 50%
+
+.wrap-vertical-two-column
+  flex-basis: percentage(624 / 1068)
+  @extend %flex-column
+  > *
+    min-height: 400px
+
+.wrap-horizontal
+  display: flex
+  > *
+    flex-basis: 50%
+
+.section
+  @extend %flex-column
+  justify-content: space-between
+  padding: 3rem 6%
+  overflow-x: hidden
+  background-repeat: no-repeat
+  > *
+    margin-bottom: 2rem
+  > *:last-child
+    margin-bottom: 0
+
+.social-link
+  @extend %flex-column
+  @extend %align-center
+  justify-content: center
+  min-height: 232px
+  > *
+    margin-bottom: 1.5rem
+  > *:last-child
+    margin-bottom: 0
+
+#eggs
+  background-color: #0cc4d9
+  background-image: url(../img/eggs.png)
+  background-position: top left, 0 0
+  @extend %align-right
+  min-height: 482px
+  flex-basis: 100%
+
+#pumpkins
+  background-color: #eea356
+  background-image: url(../img/pumpkins.jpg)
+  background-position: top left, 0 0
+  background-size: cover
+  @extend %align-center
+  @extend %padding-style-two
+  justify-content: flex-end
+  min-height: 800px
+  flex-basis: percentage(444 / 1068)
+
+#peas
+  background-color: #ecc0d9
+  background-image: url(../img/peas.png)
+  background-position: top right, 0 0
+  background-size: cover
+
+#search
+  background-color: #636fe6
+  @extend %align-center
+  @extend %padding-style-two
+
+#chocolate
+  background-color: #b0eee0
+  background-image: url(../img/chocolate.png)
+  background-position: bottom right, 0 0
+  justify-content: flex-start
+  @extend %align-center
+  @extend %padding-style-two
+
+#jamie
+  background-color: #d9e3ed
+  background-image: url(../img/jamie.png)
+  background-position: bottom right, 0 0
+  min-height: 464px
+  justify-content: flex-start
+  flex-basis: percentage(756 / 1068)
+
+#twitter
+  background-color: #00b1ed
+
+#facebook
+  background-color: #3b5a9a
+
+
+// -- Elements --
+%shadow
+  text-shadow: 2px 2px 3px rgba(80, 80, 80, 0.50)
+
+.title
+  font-size: 44px
+  line-height: 1.35
+  @extend %shadow
+
+.title--big
+  font-size: 64px
+  line-height: 1.17
+  @extend %shadow
+
+.title--small
+  font-size: 24px
+  @extend %shadow
+
+.title--serif
+  font-size: 36px
+  font-family: $serif
+  line-height: 1.05
+
+.title--dark-text
+  @extend .title
+  text-shadow: none
+  color: #5d5f81
+
+.subtitle
+  font-family: $serif
+  font-size: 36px
+  line-height: 1.25
+  @extend %shadow
+
+.subtitle--small
+  @extend .subtitle
+  font-size: 30px
+
+.subtitle--dark-text
+  @extend .subtitle
+  text-shadow: none
+  color: #7f8196
+
+.twitter-logo
+  width: 37px
+  height: 31px
+
+.facebook-svg
+  width: 19px
+  height: 37px
+
+.search-recipe
+  width: 85%
+  height: 44px
+  border-radius: 22px
+  color: #5d5f81
+  font-size: 14px
+  padding: 0 4%
+  text-align: center
+  // text-indent: 25%
+  font-weight: 700
+
+  border: 0
+  box-shadow: none
+  outline: none
+  margin-bottom: 0.7rem
+  &::-webkit-input-placeholder
+    // Chrome/Opera/Safari
+    color: $gray-text
+    // text-align: center
+  &::-moz-placeholder
+    // Firefox 19+
+    color: $gray-text
+    // text-align: center
+  &:-moz-placeholder
+    // Firefox 18-
+    color: $gray-text
+    // text-align: center
+  &:-ms-input-placeholder
+    // IE 10+
+    color: $gray-text
+    // text-align: center
+
+.checkbox
+  display: flex
+  align-items: center
+  cursor: pointer
+
+.checkbox__box
+  margin-right: 0.5rem
+
+.checkbox__text
+  font-family: $sans-serif-two
+  font-weight: bold
+  font-size: 0.8125rem
+  margin-bottom: 0
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Media Queries * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+@media screen and(max-width: 850px)
+  body
+    padding: 0 ($offset / 2)
+  .row-flex
+    flex-direction: column
+  .wrap-vertical-one-column
+    flex-direction: row
+  #pumpkins, #search, #chocolate
+    padding-top: 3rem
+    padding-bottom: 3rem
+  #pumpkins
+    min-height: 400px
+
+@media screen and(max-width: 450px)
+  body
+    padding: 0 ($offset / 4)
+  .wrap-horizontal
+    flex-direction: column
+  .wrap-vertical-one-column
+    flex-direction: column
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Buttons * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+.button
+  width: 8.6875rem
+  height: 2.75rem
+  position: relative
+  border-style: none
+  border-radius: 1.375rem
+  display: flex
+  align-items: center
+  justify-content: center
+  font-weight: bold
+  color: $main-text
+
+.button::before
+  content: ''
+  z-index: 0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  border-radius: 1.375rem
+  opacity: 0
+  transition: opacity $transition-time
+
+.button__text
+  z-index: 1
+  +line-height-hack
+
+.button__arrow
+  z-index: 1
+  height: 1.125rem
+  width: 1.5625rem
+
+// -- Styles Modifiers --
+.button--round
+  width: 2.75rem
+
+.button--big
+  width: 10.3125rem
+  height: 3.1875rem
+  border-radius: 1.5625rem
+  font-size: 1.25rem
+  &::before
+    border-radius: 1.5625rem
+
+// Colors Modifiers
+.button--yellow
+  +button-color($button-yellow)
+
+.button--brown
+  +button-color($button-brown)
+
+.button--blue
+  +button-color($button-blue)
+
+.button--green
+  +button-color($button-green)
+
+.button--red
+  +button-color($button-red)
+
+.button--blue-twitter
+  +button-color($button-blue-twitter)
+
+.button--blue-facebook
+  +button-color($button-blue-facebook)
+
+
+// -- State Modifiers --
+.button:hover, .button:focus
+  color: inherit
+  outline: none
+
+.button:hover::before, .button:focus::before
+  opacity: .4
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Header* * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+.logo, .menu__wrap
+  display: flex
+  align-items: center
+  transition: color $transition-time
+  color: $gray-text
+  overflow: hidden
+  .fill
+    transition: fill $transition-time
+    fill: $gray-text
+
+.logo > *:not(:first-child)
+  margin-left: 1rem
+.menu__wrap > *:not(:first-child)
+  margin-left: 0.5rem
+
+// -- Logo --
+.logo__graphic
+  width: 87px
+  height: 42px
+  overflow: visible
+
+.logo__text
+  white-space: nowrap
+  text-transform: uppercase
+  margin-bottom: 0
+  font-family: $serif
+  letter-spacing: 0.375rem
+  width: 0
+  transition: width $transition-time
+  +line-height-hack
+  @media screen and(max-width: 654px)
+    display: none
+
+// -- Menu --
+.menu
+  position: relative
+  margin-left: 1rem
+
+.menu__hamburger
+  width: 22px
+  height: 19px
+
+.menu__text
+  font-size: .5rem
+  text-transform: uppercase
+  letter-spacing: 0.2rem
+  font-weight: 700
+  +line-height-hack
+
+.menu__nav
+  display: none
+  position: absolute
+  bottom: 0
+  right: 0
+  left: 0
+  top: 0
+
+.menu__nav > ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+// -- State Modifiers --
+.logo:hover, .logo:focus,
+.menu__wrap:hover,
+.menu:focus > .menu__wrap
+  color: $hover-color
+  .fill
+    fill: $hover-color
+
+.logo:hover > .logo__text,
+.logo:focus > .logo__text
+  width: 22.25rem
+
+
+
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+// Footer  * * * * * * * * * * * * * * * * * * * * *
+// * * * * * * * * * * * * * * * * * * * * * * * * *
+.credits
+  color: $gray-text
+  transition: color $transition-time
+  position: relative
+  font-family: $sans-serif-two
+  font-weight: bold
+  font-size: 0.8125rem
+
+.credits::after
+  content: ''
+  display: block
+  position: absolute
+  right: 0
+  left: 0
+  width: 100%
+  height: 2px
+  background-color: $hover-color
+  opacity: 0
+  transform: translateY(-150%)
+  transition: transform $transition-time, opacity $transition-time
+
+// -- State Modifiers --
+.credits:hover, .credits:focus
+  color: $hover-color
+
+.credits:hover::after,
+.credits:focus::after
+  opacity: 1
+  transform: translateY(50%)

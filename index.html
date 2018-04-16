@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Food Magazine</title>
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <a href="#0" class="logo">
+      <svg class="logo__graphic"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 42">
+        <path class="fill" d="M9.63,7H11l2.28,15L7.63,23.67V37c-1,2.08-2,0-2,0V23.67L0,22,2.27,7H3.63V20a1.13,1.13,0,0,0,2,0V7h2V20a1.18,1.18,0,0,0,2,0Z"/>
+        <path class="fill" d="M51.7,0h-11a21,21,0,0,0,0,42h11a21,21,0,0,0,0-42Zm-1,37.08h-9.9A16.24,16.24,0,0,1,24.62,21,15.86,15.86,0,0,1,40.81,4.92h10.9A16.07,16.07,0,0,1,67.7,21C67.7,29.5,61.41,37.08,50.71,37.08Z"/>
+        <path class="fill" d="M85,6,78.7,21l5,2.37s.76,9.74,1,12.63c.62,1.76,2,.75,2,0V6S85.94,4,85,6Z"/>
+      </svg>
+      <h1 class="logo__text">Food Magazine</h1>
+    </a>
+
+    <a href="#0" class="menu">
+      <div class="menu__wrap">
+        <svg class="menu__hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 19">
+          <rect class="fill" width="22" height="3"/>
+          <rect class="fill" y="8" width="22" height="3"/>
+          <rect class="fill" y="16" width="22" height="3"/>
+        </svg>
+        <span class="menu__text">Menu</span>
+      </div>
+      <nav class="menu__nav">
+        <ul>
+          <li>BlaBlaBLa</li>
+          <li>BlaBlaBLa</li>
+          <li>BlaBlaBLa</li>
+          <li>BlaBlaBLa</li>
+          <li>BlaBlaBLa</li>
+        </ul>
+      </nav>
+    </a>
+  </header>
+
+  <section class="main-content">
+    <div class="row-flex">
+      <article class="section" id="eggs">
+        <h2 class="title--big">A Modern Twist<br>on a Classic</h2>
+        <p class="subtitle--small">Eggs with avocado and salsa in a<br>soft corn tortilla</p>
+        <a href="#0" class="button button--yellow button--big"><span class="button__text">Read More</span></a>
+      </article>
+    </div>
+
+    <div class="row-flex">
+      <!-- Left Column  -->
+      <article class="section" id="pumpkins">
+        <h2 class="title">Pumpkin<br>Season</h2>
+        <p class="subtitle">The recipes of autumn</p>
+        <a href="#0" class="button button--brown"><span class="button__text">Read More</span></a>
+      </article>
+      <!-- End Left Column -->
+
+      <!-- Right Column -->
+      <div class="wrap-vertical-two-column">
+        <!-- Top Row -->
+        <article class="section" id="peas">
+          <h2 class="title">Green Peas</h2>
+          <p class="subtitle">A<br>Vitamin<br>Powerhouse</p>
+          <a href="#0" class="button button--blue"><span class="button__text">Read More</span></a>
+        </article>
+        <!-- End Top Row -->
+        <!-- Bottom Row -->
+        <div class="wrap-horizontal">
+          <!-- Left Column -->
+          <section class="section" id="search">
+            <h2 class="title--serif">Recipe Finder</h2>
+            <input class="search-recipe" type="text" placeholder="e.g. ingredients, mood">
+            <div class="checkbox">
+              <input type="checkbox" class="checkbox__box"id="vegan">
+              <label for="vegan" class="checkbox__text">vegetarian</label>
+            </div>
+            <a href="#0" class="button button--green"><span class="button__text">Search</span></a>
+          </section>
+          <!-- End Left Column -->
+          <!-- Right Column -->
+          <article class="section" id="chocolate">
+            <h2 class="title--small">Chocolate Chia Seed Pudding</h2>
+            <a href="#0" class="button button--red button--round">
+              <svg class="button__arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 18">
+                <path class="fill" d="M25.000,8.953 L15.000,17.500 L15.000,12.000 L0.000,12.000 L0.000,6.000 L15.000,6.000 L15.000,0.500 L25.000,8.953 Z"/>
+              </svg>
+            </a>
+          </article>
+          <!-- End Right Column -->
+        </div>
+        <!-- End Bottom Row -->
+      </div>
+      <!-- End Right Column -->
+    </div>
+
+    <div class="row-flex">
+      <!-- Left Column -->
+      <article class="section" id="jamie">
+        <h2 class="title--dark-text">Jamie Oliver</h2>
+        <p class="subtitle--dark-text">Is starting the food<br>revolution</p>
+        <a href="#0" class="button button--red"><span class="button__text">Read More</span></a>
+      </article>
+      <!-- End Left Column -->
+      <!-- Right Column -->
+      <div class="wrap-vertical-one-column">
+        <!-- Top Row -->
+        <section class="social-link" id="twitter">
+          <svg class="twitter-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 31">
+            <path class="fill" d="M36.116,3.859 C35.875,4.367 35.427,5.009 34.772,5.785 C34.117,6.561 33.308,7.243 32.345,7.832 C32.372,8.045 32.392,8.246 32.405,8.433 C32.419,8.621 32.425,8.821 32.425,9.035 C32.425,10.159 32.298,11.389 32.044,12.727 C31.790,14.065 31.396,15.422 30.861,16.800 C30.326,18.178 29.651,19.542 28.835,20.893 C28.020,22.244 27.050,23.494 25.927,24.645 C24.804,25.795 23.527,26.812 22.096,27.695 C20.665,28.577 19.067,29.233 17.303,29.661 C15.243,30.116 13.184,30.343 11.125,30.343 C10.243,30.343 9.326,30.296 8.377,30.203 C7.428,30.109 6.478,29.935 5.529,29.681 C4.580,29.427 3.644,29.086 2.721,28.658 C1.798,28.230 0.936,27.681 0.134,27.012 C2.220,27.307 4.192,27.139 6.051,26.511 C7.909,25.882 9.601,24.993 11.125,23.842 C10.777,23.842 10.316,23.809 9.741,23.742 C9.166,23.675 8.551,23.474 7.896,23.140 C7.241,22.806 6.579,22.291 5.910,21.595 C5.242,20.900 4.653,19.923 4.145,18.666 C4.306,18.719 4.526,18.753 4.807,18.766 C5.088,18.780 5.389,18.773 5.710,18.746 C6.031,18.719 6.345,18.686 6.652,18.646 C6.960,18.606 7.234,18.559 7.475,18.505 C6.084,18.077 4.994,17.509 4.205,16.800 C3.416,16.091 2.835,15.362 2.460,14.613 C2.086,13.864 1.852,13.155 1.758,12.486 C1.665,11.817 1.618,11.296 1.618,10.921 C1.966,11.135 2.474,11.363 3.142,11.603 C3.811,11.844 4.413,11.951 4.947,11.924 C3.851,11.015 3.055,10.112 2.561,9.216 C2.066,8.320 1.772,7.450 1.678,6.608 C1.585,5.765 1.631,4.942 1.819,4.140 C2.006,3.337 2.260,2.561 2.581,1.812 C4.052,3.471 5.516,4.815 6.973,5.845 C8.431,6.875 9.821,7.671 11.145,8.233 C12.469,8.794 13.706,9.169 14.856,9.356 C16.005,9.543 17.008,9.637 17.864,9.637 C17.704,8.567 17.697,7.551 17.844,6.588 C17.991,5.625 18.299,4.742 18.767,3.939 C19.235,3.137 19.856,2.448 20.632,1.872 C21.407,1.297 22.330,0.863 23.400,0.568 C24.710,0.194 25.967,0.207 27.170,0.609 C28.374,1.010 29.403,1.705 30.259,2.695 C30.634,2.668 31.222,2.548 32.024,2.334 C32.826,2.120 33.829,1.652 35.033,0.930 C34.953,1.197 34.825,1.525 34.652,1.913 C34.478,2.301 34.257,2.695 33.990,3.096 C33.722,3.498 33.402,3.886 33.027,4.260 C32.653,4.635 32.225,4.942 31.743,5.183 C32.145,5.103 32.586,5.009 33.067,4.902 C33.468,4.795 33.936,4.655 34.471,4.481 C35.006,4.307 35.554,4.100 36.116,3.859 Z"/>
+          </svg>
+          <a href="#0" class="button button--blue-twitter"><span class="button__text">Follow</span></a>
+        </section>
+        <!-- End Top Row -->
+        <!-- Bottom Row -->
+        <section class="social-link" id="facebook">
+          <svg class="facebook-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 37">
+            <path class="fill" d="M17.379,0.076 L12.702,0.069 C7.729,0.069 4.958,2.857 4.958,8.182 L4.958,11.787 L1.635,11.787 C1.250,11.787 0.939,12.112 0.939,12.513 L0.939,17.196 C0.939,17.597 1.251,17.922 1.635,17.922 L4.958,17.922 L4.958,35.347 C4.958,35.748 5.269,36.073 5.654,36.073 L11.392,36.073 C11.777,36.073 12.088,35.748 12.088,35.347 L12.088,17.922 L17.417,17.922 C17.801,17.922 18.113,17.597 18.113,17.196 L18.115,12.513 C18.115,12.321 18.042,11.876 17.911,11.740 C17.781,11.603 17.603,11.787 17.419,11.787 L12.088,11.787 L12.088,8.797 C12.088,7.151 12.465,6.315 14.520,6.315 L17.378,6.314 C17.762,6.314 18.074,5.989 18.074,5.588 L18.074,0.802 C18.074,0.402 17.762,0.077 17.379,0.076 Z"/>
+          </svg>
+          <a href="#0" class="button button--blue-facebook"><span class="button__text">Like</span></a>
+        </section>
+        <!-- End Bottom Row -->
+      </div>
+      <!-- End Right Column -->
+    </div>
+  </section>
+
+  <footer>
+    <a href="#0" class="credits">© 2015 Food Magazine</a>
+  </footer>
+
+</body>
+</html>
